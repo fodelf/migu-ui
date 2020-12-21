@@ -1,11 +1,10 @@
 <template>
-  <button class="migu-button" :disabled="disabled">
+  <button class="migu-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="migu-loadingIndicator"></span>
     <slot />
   </button>
 </template>
-
-<script lang='ts'>
+<script lang="ts">
 import { computed } from "vue";
 export default {
   props: {
@@ -13,11 +12,11 @@ export default {
       type: String,
       default: "button",
     },
-    level: {
+    size: {
       type: String,
       default: "normal",
     },
-    size: {
+    level: {
       type: String,
       default: "normal",
     },
@@ -27,8 +26,8 @@ export default {
     },
     loading: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   setup(props) {
     const { theme, size, level } = props;
@@ -39,12 +38,11 @@ export default {
         [`migu-level-${level}`]: level,
       };
     });
-    return {classes}
+    return { classes };
   },
 };
 </script>
-
-<style lang='scss'>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
