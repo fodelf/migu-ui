@@ -4,8 +4,9 @@
     <div class="demo-component">
       <component :is="component" />
     </div>
-    <div class="demo-actions" @click="toggleCode">
-      <span>查看代码</span>
+    <div class="demo-actions" >
+      <span @click="showCode" v-if="!codeVisible">查看代码</span>
+      <span @click="hideCode" v-else>隐藏代码</span>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -34,13 +35,15 @@ export default {
         "html"
       );
     });
-    const toggleCode = () => (codeVisible.value = !codeVisible.value);
+    const showCode = () => (codeVisible.value = true);
+    const hideCode=()=>{codeVisible.value=false}
     const codeVisible = ref(false);
     return {
       Prism,
       html,
       codeVisible,
-      toggleCode,
+      showCode,
+      hideCode
     };
   },
 };
