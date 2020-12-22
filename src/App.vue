@@ -12,5 +12,6 @@ export default {
     const menuVisible = ref(width <= 500 ? false : true);
     provide("menuVisible", menuVisible);
   },
+  
 };
 </script>

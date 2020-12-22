@@ -23,6 +23,11 @@
             <router-view />
           </div>
         </main>
+        <div class="zhankai" @click="expandMenu">
+          <svg class="iconZhankai" aria-hidden="true">
+            <use xlink:href="#icon-zhankai1-copy"></use>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -46,12 +51,18 @@ export default {
         asiden.value.style.transform = `translateX(-280px)`;
       }
     };
+    const expandMenu=()=>{
+      if(menuVisible.value===false && width>900){
+        menuVisible.value=!menuVisible.value
+        asiden.value.style.transform = `translateX(0px)`
+      }
+    }
     onMounted(() => {
       if (menuVisible.value) {
         asiden.value.style.transform = `translateX(0px)`;
       }
     });
-    return { menuVisible, closeMenu, asiden, width };
+    return { menuVisible, closeMenu, asiden, width,expandMenu };
   },
 };
 </script>
@@ -100,9 +111,25 @@ export default {
       margin: auto;
     }
   }
+  .zhankai {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .iconZhankai {
+      width: 20px;
+    }
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
 }
-@media (min-width:900px) {
-  main{
+@media (min-width: 900px) {
+  main {
     margin: 30px 100px 0;
   }
 }
