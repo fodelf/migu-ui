@@ -1,15 +1,17 @@
-# 安装
+### 安装
 
-打开终端运行下列命令：
+npm 安装
 
 ```
-npm install king-ui
+npm install migu-ui
 ```
 
 或
 
 ```
-yarn add king-ui
+yarn add migu-ui
 ```
+
+###
 
 下一节：[开始使用](#/doc/get-started)

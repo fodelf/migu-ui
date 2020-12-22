@@ -1,5 +1,5 @@
 <template>
-  <div>Tabs示例</div>
+  <h1>Tabs示例</h1>
   <Demo :component="Tabs1Demo"></Demo>
 </template>
 
@@ -16,6 +16,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss' scoped>
+h1 {
+  color: #007d8d;
+}
 </style>

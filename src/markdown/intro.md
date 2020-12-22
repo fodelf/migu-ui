@@ -1,9 +1,12 @@
-# 介绍
+### 项目介绍
 
-King UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
+本项目旨在学习vue3.0而编写的组件库，使用了typescript，scss。可以快速的学习vue3中的新特性，该项目仅供学习，所以强烈不推荐在生产环境中使用。
 
-这款组件库其实是我为了总结自己这几年的技术经验而写的，全程亲手编写，尽量不采用第三方库，包括你现在看到的这个官网也几乎都是我自己写的。
+### 基本信息
 
-所以如果强烈不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的。源代码放在了 github.com/frankfang/xxxxxxx，历史提交信息非常规范，你可以按提交的顺序逐个查看；你也可以直接查看每个组件的源代码和示例，运行方法见 README.md。
+migu-ui是一个基于vue3的组件库，源代码放在了[这里](https://github.com/aalldd/migu-ui)，目前包括button，taps，dialog，switch组件，项目尚未完工，持续更新中。
+
+### 学习笔记
+[Vue3造轮子学习笔记](https://github.com/aalldd/migu-ui)
 
 下一节：[安装](#/doc/install)

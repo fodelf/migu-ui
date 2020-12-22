@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .container {
     .bannerWrapper {
       margin: 0 !important;
@@ -73,7 +73,7 @@ export default {
 .container {
   background: rgb(222, 240, 246);
   background: linear-gradient(
-    145deg,
+    180deg,
     rgba(222, 240, 246, 1) 0%,
     rgba(187, 222, 231, 1) 100%
   );
@@ -89,7 +89,8 @@ export default {
     );
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-
+    position: relative;
+    z-index: 10;
     .banner {
       padding: 100px 0;
       display: flex;
@@ -197,7 +198,7 @@ export default {
           }
         }
       }
-      @media (max-width: 500px) {
+      @media (max-width: 900px) {
         .feature-list {
           display: flex;
           flex-direction: column;

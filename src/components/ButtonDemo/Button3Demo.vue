@@ -2,7 +2,7 @@
 支持level
 </demo>  
 <template>
-  <div>
+  <div class="buttonWrapper">
     <div>
       <Button level="main">主要按钮</Button>
       <Button>普通按钮</Button>
@@ -30,5 +30,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang='scss' scoped>
+.buttonWrapper{
+  >div{
+    margin-bottom: 10px;
+  }
+}
 </style>

@@ -44,7 +44,7 @@ export default {
 </script>
 <style lang="scss">
 $h: 32px;
-$border-color: #d9d9d9;
+$border-color: #dcdfe6;
 $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
@@ -63,6 +63,7 @@ $grey: grey;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
+  font-size: 14px;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
   & + & {
@@ -97,15 +98,70 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
+  &.migu-theme-primary {
+    border:1px solid #393e46;
+    box-shadow: none;
+    color: #eee;
+    background-color: #00adb5;
+    &:hover,
+    &:focus {
+      background: lighten(#00adb5, 10%);
+    }
+  }
+  &.migu-theme-success {
+    border:1px solid #393e46;
+    box-shadow: none;
+    color: #eee;
+    background-color: #4ecca3;
+    &:hover,
+    &:focus {
+      background: lighten(#4ecca3, 10%);
+    }
+  }
+  &.migu-theme-warning {
+    border:1px solid #393e46;
+    box-shadow: none;
+    color: #4a4444;
+    background-color: #fce38a;
+    &:hover,
+    &:focus {
+      background: lighten(#fce38a, 10%);
+    }
+  }
+  &.migu-theme-info {
+    border:1px solid #393e46;
+    box-shadow: none;
+    color: #eee;
+    background-color: #52616b;
+    &:hover,
+    &:focus {
+      background: lighten(#52616b, 10%);
+    }
+  }
+  &.migu-theme-danger {
+    border:1px solid #393e46;
+    box-shadow: none;
+    color: #eee;
+    background-color: #d72323;
+    &:hover,
+    &:focus {
+      background: lighten(#d72323, 10%);
+    }
+  }
   &.migu-size-big {
-    font-size: 24px;
+    font-size: 18px;
     height: 48px;
     padding: 0 16px;
   }
   &.migu-size-small {
     font-size: 12px;
+    height: 26px;
+    padding: 0 8px;
+  }
+  &.migu-size-mini{
+    font-size: 10px;
     height: 20px;
-    padding: 0 4px;
+    padding: 0 6px;
   }
   &.migu-theme-button {
     &.migu-level-main {

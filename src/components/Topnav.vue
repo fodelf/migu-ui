@@ -1,14 +1,14 @@
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-miaologo"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>文档</li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu">
+    <span class="toggleAside" @click="toggleMenu" ref="toggleAside">
       <svg class="iconZhankai" aria-hidden="true">
         <use xlink:href="#icon-zhankai"></use>
       </svg>
@@ -17,14 +17,32 @@
 </template>
 
 <script lang='ts'>
-import { inject, Ref } from "vue";
+import { inject, onMounted, ref, Ref, watchEffect } from "vue";
 export default {
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible");
+    const asiden=inject<Ref<HTMLDivElement>>("asiden")
+    const toggleAside = ref<HTMLSpanElement>(null);
+    const width = window.innerWidth;
+    const hash = window.location.hash;
     const toggleMenu = () => {
-      menuVisible.value = !menuVisible.value;
+      if(menuVisible.value){
+        asiden.value.style.transform=`translateX(-280px)`
+        menuVisible.value=false
+      }else{
+        asiden.value.style.transform=`translateX(0px)`
+        menuVisible.value=true
+      }
     };
-    return { toggleMenu };
+    onMounted(() => {
+      watchEffect(() => {
+        if (width < 500 && hash === "#/") {
+          toggleAside.value.style.display = "none";
+        }
+      });
+    });
+
+    return { toggleMenu, toggleAside };
   },
 };
 </script>
@@ -40,6 +58,7 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
+  background-color: rgb(221, 240, 245);
   > .logo {
     max-width: 6em;
     max-height: 10em;
@@ -75,7 +94,7 @@ export default {
       height: 32px;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 900px) {
     > .menu {
       display: none;
     }
