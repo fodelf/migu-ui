@@ -2,8 +2,7 @@
   <button
     class="migu-switch"
     :class="{ 'migu-checked': value }"
-    @click="toggle"
-  >
+    @click="toggle">
     <span></span>
   </button>
 </template>

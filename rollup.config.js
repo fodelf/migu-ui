@@ -12,20 +12,20 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Gulu',
-    file: 'dist/lib/gulu.js',
+    name: 'Migu',
+    file: 'dist/lib/migu.js',
     format: 'umd',
     plugins: [terser()]
   },
   plugins: [
+    vue({
+      include: /\.vue$/,
+    }),
     scss({ include: /\.scss$/, sass: dartSass }),
     esbuild({
       include: /\.[jt]s$/,
       minify: process.env.NODE_ENV === 'production',
       target: 'es2015' 
     }),
-    vue({
-      include: /\.vue$/,
-    })
   ],
 }
