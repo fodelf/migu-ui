@@ -5,12 +5,11 @@
       <div class="migu-dialog-wrapper">
         <div class="migu-dialog">
           <header>
-            标题
+            <slot name="title" />
             <span @click="close" class="migu-dialog-close"></span>
           </header>
           <main>
-            <p>第一行字</p>
-            <p>第二行字</p>
+            <slot name="content" />
           </main>
           <footer>
             <Button @click="ok">OK</Button>

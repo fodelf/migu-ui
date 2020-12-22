@@ -9,7 +9,7 @@
 
 ### 基本信息
 
-migu-ui是一个基于vue3的组件库，源代码放在了[这里](https://github.com/aalldd/migu-ui)，目前包括button，taps，dialog，switch组件，项目尚未完工，持续更新中。
+migu-ui是一个基于vue3的组件库，源代码放在了[这里](https://github.com/aalldd/migu-ui)，如果您想查看页面效果，可以前往[这里](https://github.com/aalldd/migu-ui-website)，migu小轮子目前包括button，taps，dialog，switch组件，项目尚未完工，持续更新中。
 
 ### 学习笔记
 [Vue3造轮子学习笔记](https://github.com/aalldd/migu-ui)
